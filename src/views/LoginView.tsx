@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 export default function LoginView() {
     return (
         <>
-            <div className="bg-slate-50 ">LoginView</div>
-            <nav>
-                <Link to='/auth/register'>
+            <h1 className='text-4xl text-white font-bold'>Iniciar Sesión</h1>
+
+            <nav className='mt-10'>
+                <Link
+                    className='text-center text-white text-lg block'
+                    to='/auth/register'>
                     ¿No tinenes cuenta? .... Crea una aquí!!
                 </Link>
             </nav>
