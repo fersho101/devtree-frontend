@@ -12,3 +12,14 @@ export async function getUser() {
         }
     }
 }
+
+export async function updateUser() {
+    try {
+        const { data } = await api<User>('/user')
+        return data
+    } catch (e) {
+        if (isAxiosError(e) && e.response) {
+            throw new Error(e.response.data.error)
+        }
+    }
+}
